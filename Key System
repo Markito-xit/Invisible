@@ -1,0 +1,74 @@
+--KEY SYSTEM 1/2
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local WindowKey = OrionLib:MakeWindow({Name = "Alsploit - Key System", HidePremium = false, IntroEnabled = false, IntroText = "Game Hub", SaveConfig = true, ConfigFolder = "GameHub-Orion"})
+
+--Values
+
+_G.Key = "VoidLinda"
+_G.KeyInput = "string"
+
+--Functions
+
+function IncorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Incorrect Key!",
+        Content = "You Have Entered A Incorrect Key!",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end
+
+function Clickboard()
+    OrionLib:MakeNotification({
+        Name = "Information",
+        Content = "Check Your ClipBoard!",
+        Image = "rbxassetid://4483345998",
+        Time = 8
+    })
+end
+
+
+
+function MakeScriptHub()
+    OrionLib:Destroy()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Markito-xit/Sol-Hub/refs/heads/main/obfuscated_script.txt"))()
+end
+
+--KeySystem 2/2
+
+local KeyTab = WindowKey:MakeTab({
+    Name = "Get Key",
+    Icon = "rbxassetid://6023426915",
+    PremiumOnly = false
+})
+
+KeyTab:AddButton({
+    Name = "Get Key",
+    Callback = function()
+            setclipboard("https:") -- Your Link To get Key
+            toclipboard("https:") -- Your Link To get Key
+            Clickboard()
+            end   
+})
+
+
+KeyTab:AddTextbox({
+    Name = "Enter Key",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(Value)
+        _G.KeyInput = Value
+    end      
+})
+
+KeyTab:AddButton({
+    Name = "Check Key",
+    Callback = function()
+              if _G.KeyInput == _G.Key then
+            MakeScriptHub()
+            else
+                IncorrectKeyNotification()
+            end
+      end    
+})
