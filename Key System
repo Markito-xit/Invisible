@@ -46,8 +46,8 @@ local KeyTab = WindowKey:MakeTab({
 KeyTab:AddButton({
     Name = "Get Key",
     Callback = function()
-            setclipboard("https:") -- Your Link To get Key
-            toclipboard("https:") -- Your Link To get Key
+            setclipboard("https://discord.gg/StqyAJj6EJ") -- Your Link To get Key
+            toclipboard("https://discord.gg/StqyAJj6EJ") -- Your Link To get Key
             Clickboard()
             end   
 })
