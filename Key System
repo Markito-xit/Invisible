@@ -5,7 +5,7 @@ local WindowKey = OrionLib:MakeWindow({Name = "Alsploit - Key System", HidePremi
 
 --Values
 
-_G.Key = "VoidLinda"
+_G.Key = "VoidSapeca"
 _G.KeyInput = "string"
 
 --Functions
